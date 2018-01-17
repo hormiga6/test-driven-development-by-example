@@ -9,7 +9,11 @@ public class Sum implements Expression{
     }
 
     public Expression plus(Expression addednd){
-        return null;
+        return new Sum(this, addend);
+    }
+
+    public Expression times(int multiplier){
+        return new Sum(augened.times(multiplier), addend.times(multiplier));
     }
 
     public Money reduce(Bank bank, String to){
